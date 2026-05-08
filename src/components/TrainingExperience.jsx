@@ -1,2 +1,24 @@
 import React from 'react';
-export default function TrainingExperience(){const items=['Personas que quieren empezar a entrenar con guía.','Personas que buscan ganar fuerza y resistencia.','Deportistas que necesitan preparación física complementaria.','Personas que quieren mejorar hábitos y constancia.','Quienes prefieren un espacio local cercano antes que un gimnasio impersonal.'];return <section className="section"><h2>¿Para quién es?</h2><div className="grid">{items.map((i)=><article className="card" key={i}><p>{i}</p></article>)}</div></section>}
+
+const steps = [
+  ['01', 'Charlamos objetivo y punto de partida.'],
+  ['02', 'Armamos una propuesta progresiva para tu nivel.'],
+  ['03', 'Entrenás con correcciones, seguimiento y ajuste continuo.'],
+  ['04', 'Medís avances en fuerza, técnica y constancia.'],
+];
+
+export default function TrainingExperience() {
+  return (
+    <section className="section timeline">
+      <h2>Cómo es el proceso</h2>
+      <div className="timeline-list">
+        {steps.map(([num, text]) => (
+          <article key={num} className="timeline-item">
+            <span>{num}</span>
+            <p>{text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
