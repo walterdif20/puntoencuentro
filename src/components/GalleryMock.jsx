@@ -1,1 +1,2 @@
+import React from 'react';
 export default function GalleryMock(){const cards=['Zona de fuerza','Clases dinámicas','Entrenamiento funcional','Comunidad Punto'];return <section className="section alt"><h2>Experiencia Punto</h2><div className="gallery">{/* Reemplazar estas tarjetas por fotos reales del cliente cuando estén autorizadas. */}{cards.map((c)=><article key={c} className="mock"><span>{c}</span></article>)}</div></section>}

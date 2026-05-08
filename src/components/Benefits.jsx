@@ -1,3 +1,4 @@
+import React from 'react';
 const items = [
   ['Entrenamientos guiados', 'Sesiones con estructura clara para progresar sin improvisar.'],
   ['Mejora de fuerza y resistencia', 'Combinamos cargas y trabajo funcional con foco en rendimiento real.'],

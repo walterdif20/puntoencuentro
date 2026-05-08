@@ -1,3 +1,4 @@
+import React from 'react';
 import { business, buildWhatsAppUrl } from '../data/business';
 
 export default function Hero() {

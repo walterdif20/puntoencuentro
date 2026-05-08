@@ -1,1 +1,2 @@
+import React from 'react';
 export default function TrainingExperience(){const items=['Personas que quieren empezar a entrenar con guía.','Personas que buscan ganar fuerza y resistencia.','Deportistas que necesitan preparación física complementaria.','Personas que quieren mejorar hábitos y constancia.','Quienes prefieren un espacio local cercano antes que un gimnasio impersonal.'];return <section className="section"><h2>¿Para quién es?</h2><div className="grid">{items.map((i)=><article className="card" key={i}><p>{i}</p></article>)}</div></section>}
