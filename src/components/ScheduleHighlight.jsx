@@ -25,6 +25,30 @@ const scheduleItems = [
     time: '17:00 hs',
     tone: 'lime',
   },
+  {
+    name: 'Acondicionamiento Fisico',
+    days: 'Lunes · Miércoles · Viernes', //martes y jueves 9,10,15 y sabados 9,10
+    time: '9:00, 10:00, 15:00, 18:00 hs',
+    tone: 'lime',
+  },
+  {
+    name: 'Entrenamiento Funcional',
+    days: 'Lunes · Miércoles · Viernes',//martes y jueves 8 18 19 20
+    time: '7:00, 8:00, 14:00, 19:00, 20:00 hs',
+    tone: 'dark',
+  },
+  {
+    name: 'Acondicionamiento Fisico',
+    days: 'Martes · Jueves', //martes y jueves 9,10,15 y sabados 9,10
+    time: '9:00, 10:00, 15:00 hs',
+    tone: 'dark',
+  },
+  {
+    name: 'Entrenamiento Funcional',
+    days: 'Martes · Jueves',//martes y jueves 8 18 19 20
+    time: '8:00, 18:00, 19:00, 20:00 hs',
+    tone: 'lime',
+  }
 ];
 
 export default function ScheduleHighlight() {

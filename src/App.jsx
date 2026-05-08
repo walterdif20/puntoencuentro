@@ -42,12 +42,12 @@ const App = () => {
       <header id="inicio"><Navbar /></header>
       <main>
         <Hero />
+        <ScheduleHighlight />
         <Benefits />
         <Services />
         <WhyChooseUs />
         <TrainingExperience />
         <GalleryMock />
-        <ScheduleHighlight />
         <Location />
         <FinalCTA />
       </main>
