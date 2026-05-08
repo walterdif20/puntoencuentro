@@ -10,11 +10,16 @@ const links = [
   { href: '#contacto', label: 'Contacto' },
 ];
 
+const logoUrl = '/assets/branding/logo-punto-entrenamiento.jpg';
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
     <nav className="navbar">
-      <a className="brand" href="#inicio">Punto Entrenamiento</a>
+      <a className="brand brand-with-logo" href="#inicio">
+        <img src={logoUrl} alt="Logo Punto Entrenamiento" />
+        <span>Punto Entrenamiento</span>
+      </a>
       <button className="menu-btn" aria-label="Abrir menú" onClick={() => setOpen(!open)}>☰</button>
       <div className={`nav-links ${open ? 'open' : ''}`}>
         {links.map((l) => <a key={l.href} href={l.href} onClick={() => setOpen(false)}>{l.label}</a>)}
