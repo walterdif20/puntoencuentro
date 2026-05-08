@@ -1,0 +1,3 @@
+import React from 'react';
+import { buildWhatsAppUrl } from '../data/business';
+export default function FinalCTA(){return <section id="contacto" className="section cta"><h2>Empezá hoy. Tu próximo entrenamiento puede ser el punto de cambio.</h2><p>Escribinos por WhatsApp y te ayudamos a encontrar el mejor horario para empezar.</p><a className="btn" href={buildWhatsAppUrl()} target="_blank" rel="noreferrer">Quiero consultar horarios y cupos</a><div className="chips"><span>Necochea</span><span>Funcional</span><span>Fuerza</span><span>Musculación</span></div></section>}

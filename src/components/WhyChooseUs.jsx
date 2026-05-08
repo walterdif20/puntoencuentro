@@ -1,0 +1,2 @@
+import React from 'react';
+export default function WhyChooseUs(){return <section className="section split"><div><h2>¿Por qué elegir Punto Entrenamiento?</h2><p>No entrenás solo: entrenás con guía, seguimiento y una propuesta adaptable a tu nivel.</p></div><ul><li>Seguimiento constante</li><li>Propuesta dinámica y desafiante</li><li>Objetivos de salud, fuerza y rendimiento</li><li>Comunidad local activa</li><li>Espacio pensado para progresar</li></ul></section>}
