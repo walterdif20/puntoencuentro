@@ -1,34 +1,27 @@
 import React from 'react';
 
+const igEmbeds = [
+  'https://www.instagram.com/p/C4GpwvguLq2/embed',
+  'https://www.instagram.com/p/C4E4Q_GOlrW/embed',
+  'https://www.instagram.com/p/C31RQ5tOq9N/embed',
+];
+
 export default function GalleryMock() {
   return (
-    <section className="section split before-after">
+    <section className="section split ig-section">
       <div>
-        <p className="eyebrow">Antes / Después</p>
-        <h2>De entrenar sin dirección a entrenar con progreso medible</h2>
-        <div className="compare">
-          <article>
-            <h3>Antes</h3>
-            <ul>
-              <li>Rutina improvisada.</li>
-              <li>Poca constancia y estancamiento.</li>
-              <li>Sin métricas claras.</li>
-            </ul>
-          </article>
-          <article>
-            <h3>Después</h3>
-            <ul>
-              <li>Plan claro según objetivo.</li>
-              <li>Seguimiento para sostener el hábito.</li>
-              <li>Mejoras visibles en fuerza y técnica.</li>
-            </ul>
-          </article>
-        </div>
+        <p className="eyebrow">Desde Instagram</p>
+        <h2>El día a día real de Punto Entrenamiento</h2>
+        <p className="lead">Integramos publicaciones del Instagram oficial para mostrar el estilo de entrenamiento, la comunidad y el ritmo del espacio.</p>
+        <a className="btn btn-ghost" href="https://www.instagram.com/punto_entrenamiento/" target="_blank" rel="noreferrer">Ver perfil completo</a>
       </div>
-      <aside className="panel glow-panel">
-        <h3>Lo que cambia</h3>
-        <p>Cuando el proceso tiene estructura, entrenar deja de ser una obligación y pasa a ser una decisión que te fortalece cada semana.</p>
-      </aside>
+      <div className="ig-grid">
+        {igEmbeds.map((src) => (
+          <div className="ig-card" key={src}>
+            <iframe title={`Publicación ${src}`} src={src} loading="lazy" allowTransparency="true" />
+          </div>
+        ))}
+      </div>
     </section>
   );
 }

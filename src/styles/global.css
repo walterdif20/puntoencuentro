@@ -18,3 +18,7 @@ a{color:inherit}.section{padding:5rem 1.2rem;max-width:1120px;margin:auto}.alt{b
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 @media (max-width:900px){.hero,.split,.location-premium{grid-template-columns:1fr}.nav-links{display:none;position:absolute;top:64px;left:1rem;right:1rem;background:#0f1624;border:1px solid #ffffff21;border-radius:12px;padding:1rem;flex-direction:column}.nav-links.open{display:flex}.menu-btn{display:inline-flex;background:transparent;color:white;border:1px solid #fff4;border-radius:8px;padding:.35rem .6rem}.btn-sm{display:none}.metrics-band{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:640px){.grid,.before-after .compare,.footer-grid,.metrics-band{grid-template-columns:1fr}h1{font-size:2rem}.hero-editorial{padding:3rem 1.1rem}}
+
+.brand-with-logo{display:flex;align-items:center;gap:.55rem;text-decoration:none}.brand-with-logo img{width:42px;height:42px;border-radius:999px;object-fit:cover;border:2px solid #ffffff3b}.brand-with-logo span{font-weight:800}
+.ig-section{align-items:start}.ig-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.ig-card{border:1px solid #ffffff22;border-radius:16px;overflow:hidden;background:#0f1624;min-height:320px}.ig-card iframe{width:100%;min-height:320px;border:0}
+@media (max-width:640px){.ig-grid{grid-template-columns:1fr}}
