@@ -7,6 +7,7 @@ import Services from './components/Services';
 import WhyChooseUs from './components/WhyChooseUs';
 import TrainingExperience from './components/TrainingExperience';
 import GalleryMock from './components/GalleryMock';
+import ScheduleHighlight from './components/ScheduleHighlight';
 import Location from './components/Location';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
@@ -46,6 +47,7 @@ const App = () => {
         <WhyChooseUs />
         <TrainingExperience />
         <GalleryMock />
+        <ScheduleHighlight />
         <Location />
         <FinalCTA />
       </main>
