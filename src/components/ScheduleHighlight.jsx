@@ -1,54 +1,50 @@
 import React from 'react';
 
-const scheduleItems = [
+const scheduleByDay = [
   {
-    name: 'Entrenamiento para surfistas (Hermanos del Mar)',
-    days: 'Lunes · Miércoles · Viernes',
-    time: '17:00 hs',
-    tone: 'lime',
-  },
-  {
-    name: 'Yoga funcional',
-    days: 'Martes · Jueves',
-    time: '16:00 hs',
+    day: 'Lunes · Miércoles · Viernes',
     tone: 'dark',
+    classes: [
+      {
+        name: 'Entrenamiento funcional',
+        times: ['07:00', '08:00', '14:00', '19:00', '20:00'],
+      },
+      {
+        name: 'Acondicionamiento físico',
+        times: ['09:00', '10:00', '15:00', '18:00'],
+      },
+      {
+        name: 'Entrenamiento postural',
+        times: ['16:00'],
+      },
+      {
+        name: 'Entrenamiento para surfistas (Hermanos del Mar)',
+        times: ['17:00'],
+      },
+    ],
   },
   {
-    name: 'Entrenamiento postural',
-    days: 'Lunes · Miércoles · Viernes',
-    time: '16:00 hs',
-    tone: 'dark',
-  },
-  {
-    name: 'Vida activa',
-    days: 'Martes · Jueves',
-    time: '17:00 hs',
+    day: 'Martes · Jueves',
     tone: 'lime',
+    classes: [
+      {
+        name: 'Entrenamiento funcional',
+        times: ['08:00', '18:00', '19:00', '20:00'],
+      },
+      {
+        name: 'Acondicionamiento físico',
+        times: ['09:00', '10:00', '15:00'],
+      },
+      {
+        name: 'Yoga funcional',
+        times: ['16:00'],
+      },
+      {
+        name: 'Vida activa',
+        times: ['17:00'],
+      },
+    ],
   },
-  {
-    name: 'Acondicionamiento Fisico',
-    days: 'Lunes · Miércoles · Viernes', //martes y jueves 9,10,15 y sabados 9,10
-    time: '9:00, 10:00, 15:00, 18:00 hs',
-    tone: 'lime',
-  },
-  {
-    name: 'Entrenamiento Funcional',
-    days: 'Lunes · Miércoles · Viernes',//martes y jueves 8 18 19 20
-    time: '7:00, 8:00, 14:00, 19:00, 20:00 hs',
-    tone: 'dark',
-  },
-  {
-    name: 'Acondicionamiento Fisico',
-    days: 'Martes · Jueves', //martes y jueves 9,10,15 y sabados 9,10
-    time: '9:00, 10:00, 15:00 hs',
-    tone: 'dark',
-  },
-  {
-    name: 'Entrenamiento Funcional',
-    days: 'Martes · Jueves',//martes y jueves 8 18 19 20
-    time: '8:00, 18:00, 19:00, 20:00 hs',
-    tone: 'lime',
-  }
 ];
 
 export default function ScheduleHighlight() {
@@ -56,14 +52,24 @@ export default function ScheduleHighlight() {
     <section className="section schedule-highlight" aria-label="Horarios especiales">
       <div className="schedule-header">
         <p className="eyebrow">Horarios</p>
-        <h2>Clases especiales con cupos limitados</h2>
+        <h2>Encontrá tu franja ideal por día</h2>
       </div>
       <div className="schedule-grid">
-        {scheduleItems.map((item) => (
-          <article className={`schedule-card ${item.tone}`} key={item.name}>
-            <h3>{item.name}</h3>
-            <p>{item.days}</p>
-            <strong>{item.time}</strong>
+        {scheduleByDay.map((group) => (
+          <article className={`schedule-card ${group.tone}`} key={group.day}>
+            <h3>{group.day}</h3>
+            <ul className="schedule-list">
+              {group.classes.map((item) => (
+                <li key={`${group.day}-${item.name}`}>
+                  <div className="schedule-class-name">{item.name}</div>
+                  <div className="schedule-time-chips" aria-label={`Horarios de ${item.name}`}>
+                    {item.times.map((time) => (
+                      <span key={`${item.name}-${time}`}>{time}</span>
+                    ))}
+                  </div>
+                </li>
+              ))}
+            </ul>
           </article>
         ))}
       </div>
